@@ -1,0 +1,51 @@
+@use 'variables' as v;
+
+/* 480px */
+@mixin telefono {
+    @media screen and (min-width: v.$telefono) {
+        @content;
+    }
+}
+
+/* 768px */
+@mixin tablet {
+    @media screen and (min-width: v.$tablet) {
+        @content;
+    }
+}
+
+/* 1200px */
+@mixin desktopS {
+    @media screen and (min-width: v.$desktopS) {
+        @content;
+    }
+}
+
+/* 1400px */
+@mixin desktopXL {
+    @media screen and (min-width: v.$desktopXL) {
+        @content;
+    }
+}
+
+/* Mixin contenedor */
+@mixin container {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Mixin de Flex */
+@mixin flex($direction, $justify, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    gap: $gap;
+}
+
+/* Mixin de Grid */
+@mixin grid($columnas, $fr, $gap) {
+    display: grid;
+    grid-template-columns: repeat($columnas, $fr);
+    gap: $gap;
+}

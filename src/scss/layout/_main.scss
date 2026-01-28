@@ -1,0 +1,8 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+main {
+    max-width: 1200px; /* o el ancho que prefieras */
+    margin: 0 auto;
+}

@@ -1,0 +1,157 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer {
+    margin-top: auto;
+    background-image: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0) 0%,
+            v.$dark-color-lighten 20%);
+    color: #000;
+    padding-block: 3rem;
+    transition: all .3s ease-in-out;
+}
+
+.footer__title {
+    margin-bottom: 2rem;
+}
+
+.footer__description {
+    font-size: 1.3rem;
+}
+
+.footer__content {
+    gap: 5rem;
+}
+
+.footer__data {
+    gap: 2.5rem 3.5rem;
+}
+
+.footer__links {
+    display: grid;
+    row-gap: 1.5rem;
+}
+
+.footer__link {
+    font-size: 1.2rem;
+    color: #000;
+    transition: all .2s ease;
+    font-weight: v.$font-semi;
+
+    &:hover {
+        color: v.$dark_olive_green;
+    }
+}
+
+.footer__contact {
+    font-size: 1.2rem;
+    color: #000;
+    transition: all .2s ease;
+    font-weight: v.$font-semi;
+
+    &:hover {
+        color: v.$dark_olive_green;
+    }
+}
+
+.footer__group,
+.footer__social {
+    display: flex;
+}
+
+.footer__group {
+    align-items: center;
+    flex-direction: column;
+    row-gap: 3rem;
+    transition: all .3s ease-in-out;
+}
+
+.footer__social {
+    -moz-column-gap: 2rem;
+    column-gap: 2rem
+}
+
+.footer__social a {
+    transition: transform .4s;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.footer__social .ri-instagram-line,
+.footer__social .ri-whatsapp-line,
+.footer__social .ri-youtube-line {
+    color: v.$dark_olive_green;
+    font-size: 3rem;
+    transition: .4s;
+
+    &:hover {
+        color: v.$bright_lime_green;
+    }
+}
+
+.footer__copy {
+    font-size: 1.25rem;
+    text-align: center;
+
+
+}
+
+.footer__copy a {
+    color: #000;
+    transition: color .2s ease;
+    font-weight: v.$font-semi;
+
+    &:hover {
+        color: v.$dark_olive_green;
+    }
+}
+
+@include m.tablet {
+    .footer__content {
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-between;
+    }
+
+    .footer__data {
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-between
+    }
+
+    .footer__group {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 5rem
+    }
+
+    .footer__copy {
+        order: -1
+    }
+}
+
+.btn-wsp {
+    bottom: 2%;
+    color: v.$white;
+    display: inline-flex;
+    font-size: 2.5rem;
+    left: 1rem;
+    position: fixed;
+    transition: transform .4s, color .4s;
+    z-index: 10
+}
+
+.btn-wsp i {
+    border-radius: 50%
+}
+
+.btn-wsp .ri-whatsapp-line:before {
+    background-color: v.$forest_green;
+    border-radius: inherit;
+    padding: 7px
+}
+
+.btn-wsp:hover {
+    color: v.$black;
+    transform: translateY(-5px)
+}

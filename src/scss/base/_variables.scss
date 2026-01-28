@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Fuentes */
+$body-font: 'Nunito', sans-serif;
+$header_font: 'Playfair', sans-serif;
+$logo_font: 'Libre Baskerville', sans-serif;
+$font-medium: 500;
+$font-semi: 600;
+$font-bold: 700;
+
+/*======= Paleta de Colores ===========*/
+
+/* Blanco */
+$white: #fff;
+$light-white: #f2f2f2;
+
+/* Gris */
+$dark_slate_gray: #354343;
+
+
+/*Negro*/
+$black: #000;
+$dark_color: #141414;
+$dark-color-light: #8a8a8a;
+$dark-color-lighten: #e6e6e6;
+$dark-color-lightemn: #ab9d9d;
+
+/* Orange*/
+$carrot_orange: #e67e22;
+
+/* Green */
+$green-smooth: rgb(117, 169, 156);
+$green-cake: rgb(202, 228, 189);
+$dark_olive_green: #4d7c0f;
+$bright_lime_green: #76bc1a;
+$forest_green: rgba(0, 136, 34, .8);
+
+
+/* Media Queries - Responsive Design */
+$telefono: 480px;
+$tablet: 768px;
+$desktopS: 1024px;
+$desktopM: 1200px;
+$desktopXL: 1400px;

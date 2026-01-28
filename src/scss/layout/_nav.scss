@@ -1,0 +1,186 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.bg-light {
+    background-color: v.$light-white;
+}
+
+.header {
+    background-image: linear-gradient(to top,
+            rgba(255, 255, 255, 0) 5%,
+            v.$dark-color-lighten 20%);
+    width: 100%;
+    padding: 1rem .5rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+
+.bx {
+    font-size: 2rem;
+
+    &:hover {
+        color: v.$dark-color-light;
+        transition: color .3s ease;
+    }
+}
+
+
+.nav {
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__menu {
+    position: fixed;
+    top: 4rem;
+    left: -100%;
+    width: 55%;
+    height: 100vh;
+    padding: 2rem;
+    background-color: v.$white;
+    transition: .5s ease;
+}
+
+.show {
+    left: 0;
+}
+
+.nav__overlay {
+    display: none;
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    transition: .5s;
+}
+
+.nav__list {
+    list-style: none;
+    height: 95%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.nav__link {
+    color: v.$black;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    font-weight: v.$font-semi;
+    text-transform: uppercase;
+    transition: all .3s ease;
+
+    &:hover {
+        color: v.$carrot_orange;
+        border-top: 1px solid v.$carrot_orange;
+        border-bottom: 1px solid v.$carrot_orange;
+    }
+}
+
+.nav__active {
+    color: v.$carrot_orange;
+    border-top: 1px solid v.$carrot_orange;
+    border-bottom: 1px solid v.$carrot_orange;
+}
+
+.selected {
+    color: v.$carrot_orange;
+    border-top: 1px solid v.$carrot_orange;
+    border-bottom: 1px solid v.$carrot_orange;
+}
+
+.nav__logo {
+    font-family: v.$logo_font;
+    letter-spacing: 3px;
+    color: v.$dark_slate_gray;
+
+    p {
+        @include m.tablet {
+            font-size: 5rem;
+            letter-spacing: 1rem;
+            line-height: 1;
+        }
+    }
+}
+
+.nav__toggle {
+    font-size: 1.3rem;
+    cursor: pointer;
+
+    @include m.tablet {
+        display: none;
+    }
+}
+
+
+
+/* =================== RESPONSIVE DESIGN ============================*/
+@include m.tablet {
+    .header {
+        height: 20vh;
+    }
+
+    .nav {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .nav__menu {
+        position: static;
+        display: flex;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        padding: 0;
+        justify-content: flex-end;
+    }
+
+    .nav__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem 1rem;
+    }
+
+    .nav__item {
+        margin-bottom: 0;
+    }
+
+    .nav__link {
+        padding: 1rem;
+        color: v.$black;
+        font-size: 1.2rem;
+        font-weight: v.$font-semi;
+        text-transform: uppercase;
+        transition: all .3s ease;
+
+        &:hover {
+            color: v.$carrot_orange;
+            border-top: 1px solid v.$carrot_orange;
+            border-bottom: 1px solid v.$carrot_orange;
+        }
+    }
+
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__overlay {
+        display: none;
+        /* Elimina el overlay ya que no es necesario en vistas grandes */
+    }
+}
+

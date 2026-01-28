@@ -1,0 +1,76 @@
+@use 'variables' as v;
+*,
+*::after,
+*::before {
+    box-sizing:inherit;
+}
+html {
+    box-sizing: border-box;
+    font-size:62.5%;
+    scroll-behavior:smooth;
+}
+body {
+    min-height: 100%;
+    font-family: v.$body-font;
+}
+ul,li {
+    list-style: none;
+}
+nav, nav a {
+    transition: all .3s ease-in-out;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+}
+blockquote,ul {
+    margin:0
+}
+ul {
+    list-style-type:none;
+    padding: 0
+}
+p {
+    font-size:2rem;
+    line-height:1.5;
+    margin:0
+}
+a {
+    text-decoration:none
+}
+h1,h2,h3,h4,h5,h6 {
+    margin:0
+}
+h1 {
+    font-size:4rem
+}
+h2 {
+    font-size:3.6rem
+}
+h3 {
+    font-size:3rem
+}
+h4 {
+    font-size:2rem
+}
+.grid {
+    display:grid;
+    gap:2.5rem
+}
+.bd-grid {
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    column-gap: 2rem;
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.container {
+    margin:0 auto;
+    max-width:120rem;
+    width:95%
+}
+.text-center {
+    text-align: center;
+}
